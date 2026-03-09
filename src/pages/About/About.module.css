@@ -1,3 +1,214 @@
 .page {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
 }
+
+/* ── Hero ──────────────────────────────────────── */
+.hero {
+  text-align: center;
+  padding: 3.5rem 2rem 2.5rem;
+}
+
+.heroTitle {
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--foreground);
+
+}
+
+.heroSubtitle {
+  font-size: clamp(1.125rem, 1.3vw, 1.25rem);
+  color: var(--muted-foreground);
+}
+
+/* ── Sections ──────────────────────────────────── */
+.section {
+  padding: 4rem 2rem;
+}
+
+.sectionAlt {
+  background: color-mix(in oklab, var(--secondary) 30%, transparent);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Text column ───────────────────────────────── */
+.sectionTitle {
+  font-size: clamp(1.875rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.textCol p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--muted-foreground);
+  margin-bottom: 1rem;
+}
+
+/* ── Image column ──────────────────────────────── */
+.img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+/* ── Timeline ──────────────────────────────────── */
+.timelineWrap {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.timelineTitle {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.timelineSubtitle {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  text-align: left;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 2.25rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineDot {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timelineCard {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  margin-top: 0.75rem;
+}
+
+.timelineCardTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.timelineCardText {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+}
+
+/* ── CTA ───────────────────────────────────────── */
+.cta {
+  background: color-mix(in oklab, var(--secondary) 30%, transparent);
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ctaTitle {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.ctaText {
+  max-width: 520px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+}
+
+/* ── Breakpoints ───────────────────────────────── */
+
+@media (min-width: 1280px) {
+  .inner {
+    max-width: 1200px;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .sectionAlt .inner {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .inner {
+    grid-template-columns: 5fr 4fr;
+    gap: 2.5rem;
+  }
+
+  .sectionAlt .inner {
+    grid-template-columns: 4fr 5fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .section:not(.sectionAlt) .imgCol {
+    order: -1;
+  }
+}
+
+
