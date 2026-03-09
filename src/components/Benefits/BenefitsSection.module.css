@@ -1,0 +1,164 @@
+.section {
+  width: 100%;
+  padding: 96px 24px 112px;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 980px;
+  margin: 0 auto 72px;
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #1f2328;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 30px;
+  color: #687081;
+}
+
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 44px;
+}
+
+.card {
+  text-align: center;
+}
+
+.iconWrapper {
+  width: 78px;
+  height: 78px;
+  border-radius: 999px;
+  margin: 0 auto 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1b9a4a;
+  background: #dde7e1;
+}
+
+.cardTitle {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #23272b;
+  margin-bottom: 12px;
+}
+
+.cardDescription {
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 26px;
+  color: #687081;
+}
+
+@media (width <= 1400px) {
+  .title {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .cardDescription {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@media (width <= 1100px) {
+  .section {
+    padding: 80px 20px 92px;
+  }
+
+  .header {
+    margin-bottom: 58px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 28px;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .cardDescription {
+    font-size: 15px;
+    line-height: 23px;
+  }
+}
+
+@media (width <= 700px) {
+  .section {
+    padding: 62px 16px 74px;
+  }
+
+  .header {
+    margin-bottom: 44px;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 14px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .iconWrapper {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+  }
+
+  .cardTitle {
+    font-size: 21px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+
+  .cardDescription {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
