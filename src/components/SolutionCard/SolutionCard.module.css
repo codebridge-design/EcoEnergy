@@ -1,0 +1,81 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.12), 0 4px 10px -5px rgb(0 0 0 / 0.08);
+}
+
+.iconArea {
+  position: relative;
+  height: 12rem;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb, var(--primary) 10%, transparent),
+    color-mix(in srgb, var(--primary) 5%, transparent)
+  );
+}
+
+.icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 6rem;
+  height: 6rem;
+  color: color-mix(in srgb, var(--primary) 20%, transparent);
+  transition: transform 0.2s;
+}
+
+.card:hover .icon {
+  transform: scale(1.1);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.title {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.description {
+  margin-bottom: 1rem;
+  flex: 1;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
