@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react';
 import Button from '../../components/Button/Button';
 import styles from './About.module.css';
 
@@ -71,7 +72,7 @@ export default function About() {
       <section className={styles.cta}>
         <h2 className={styles.ctaTitle}>Ready to Make the Switch?</h2>
         <p className={styles.ctaText}>Join thousands of businesses and homeowners who have already transitioned to renewable energy. Let's create a sustainable future together.</p>
-        <Button to="/contacts">Contact Us Today →</Button>
+        <Button to="/contacts">Contact Us Today <ArrowRight size={18} strokeWidth={2.5} /></Button>
       </section>
     </div>
   );
