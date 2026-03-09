@@ -60,22 +60,3 @@
   line-height: 1.6;
   color: var(--muted-foreground);
 }
-
-.btn {
-  width: 100%;
-  padding: 0.5rem 1rem;
-  background: var(--background);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-medium);
-  font-family: var(--font-sans);
-  color: var(--foreground);
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-}
-
-.btn:hover {
-  background: var(--accent);
-  color: var(--accent-foreground);
-}

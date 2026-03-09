@@ -1,5 +1,6 @@
 import { NavLink, Link } from 'react-router-dom';
 import { Leaf } from 'lucide-react';
+import Button from '../Button/Button';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -17,7 +18,7 @@ export default function Header() {
         <NavLink to="/contacts" className={({ isActive }) => isActive ? styles.active : ''}>Contacts</NavLink>
       </nav>
 
-      <Link to="/contacts" className={styles.cta}>Get Started</Link>
+      <Button to="/contacts" size="sm">Get Started</Button>
     </header>
   );
 }

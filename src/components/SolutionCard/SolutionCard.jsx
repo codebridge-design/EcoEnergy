@@ -1,4 +1,5 @@
 import * as Icons from 'lucide-react';
+import Button from '../Button/Button';
 import styles from './SolutionCard.module.css';
 
 export default function SolutionCard({ icon, title, description, onQuote }) {
@@ -12,9 +13,9 @@ export default function SolutionCard({ icon, title, description, onQuote }) {
       <div className={styles.body}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
-        <button className={styles.btn} onClick={onQuote}>
+        <Button variant="ghost" size="sm" fullWidth onClick={onQuote}>
           Get a Quote
-        </button>
+        </Button>
       </div>
     </article>
   );
