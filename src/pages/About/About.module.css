@@ -98,9 +98,10 @@
   position: absolute;
   left: 2.25rem;
   top: 0;
-  bottom: 0;
+  bottom: -1.25rem;
   width: 2px;
-  background: var(--accent);
+  background: color-mix(in oklab, var(--primary) 50%, transparent);
+  opacity: 0.5;
 }
 
 .timelineItem {
@@ -141,7 +142,7 @@
 
 .timelineCardTitle {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--foreground);
   margin-bottom: 0.5rem;
 }
@@ -170,7 +171,7 @@
 }
 
 .ctaText {
-  max-width: 520px;
+  max-width: 720px;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--muted-foreground);
