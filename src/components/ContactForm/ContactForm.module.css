@@ -1,0 +1,144 @@
+.formSection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: 64px;
+    background-color: var(--background);
+    align-items: center;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    order: 2;
+}
+
+.formHeader {
+    margin-bottom: 24px;
+}
+
+.headingWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.iconWrapper {
+    background-color: #e6f4ea;
+    padding: 12px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconWrapper svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary);
+}
+
+.formHeading {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--foreground);
+    margin: 0;
+}
+
+.formSubheading {
+    color: #4b5563;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.formLabel {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 0.25rem;
+}
+
+.formInput {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--input-background);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(34, 160, 76, 0.1);
+}
+
+.formInput.textarea {
+    resize: none;
+    font-family: sans-serif;
+}
+
+.submitButton {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--background);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+    background-color: var(--secondary-foreground);
+}
+
+.imageContainer {
+    display: block;
+    position: relative;
+    background-color: var(--background);
+}
+
+.formImage {
+    width: 100%;
+    height: 100%;
+    max-height: 262px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .formSection {
+        grid-template-columns: 1fr 1fr;
+
+        &:nth-of-type(even) {
+            .formContainer {
+                order: 0;
+            }
+        }
+    }
+
+    .formContainer {
+        order: 1;
+    }
+
+    .formImage {
+        max-height: 870px;
+    }
+}
