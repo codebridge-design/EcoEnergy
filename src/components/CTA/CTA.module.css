@@ -1,6 +1,7 @@
 .section {
   width: 100%;
   padding: 70px 24px 98px;
+  background: color-mix(in oklab, var(--secondary) 30%, transparent);
 }
 
 .container {

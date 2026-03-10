@@ -15,7 +15,7 @@ export default function ContactForm({
             <p className={styles.formSubheading}>{subheading}</p>
           </div>
 
-          <form onSubmit={(e) => e.preventDefault()}>
+          <form onSubmit={(e) => { e.preventDefault(); console.log('Form submitted:', heading); }}>
             {fields.map((field) => (
                 <div className={styles.formGroup} key={field.id}>
                   <label className={styles.formLabel} htmlFor={field.name}>

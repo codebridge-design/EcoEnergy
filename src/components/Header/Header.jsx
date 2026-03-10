@@ -2,14 +2,8 @@ import { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Leaf, Menu, X } from 'lucide-react';
 import Button from '../Button/Button';
+import { NAV_LINKS } from '../../config/navigation';
 import styles from './Header.module.css';
-
-const navLinks = [
-  { to: '/', label: 'Home', end: true },
-  { to: '/options', label: 'Options' },
-  { to: '/about', label: 'About' },
-  { to: '/contacts', label: 'Contacts' },
-];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -25,7 +19,7 @@ export default function Header() {
         </Link>
 
         <nav className={styles.nav}>
-          {navLinks.map(({ to, label, end }) => (
+          {NAV_LINKS.map(({ to, label, end }) => (
             <NavLink
               key={to}
               to={to}
@@ -67,7 +61,7 @@ export default function Header() {
           </div>
 
           <nav className={styles.mobileNav}>
-            {navLinks.map(({ to, label, end }) => (
+            {NAV_LINKS.map(({ to, label, end }) => (
               <NavLink
                 key={to}
                 to={to}

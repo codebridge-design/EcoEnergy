@@ -1,8 +1,5 @@
 import ContactForm from '../../components/ContactForm/ContactForm';
 import { Building2, House, Handshake } from 'lucide-react';
-import sustainabilityImg from '../../assets/sustainability-img.jpeg';
-import contact2 from '../../assets/contact2.jpeg';
-import contact3 from '../../assets/contact3.jpeg';
 import styles from './Contacts.module.css';
 
 export default function Contacts() {
@@ -40,7 +37,7 @@ export default function Contacts() {
                 icon={<Building2 />}
                 fields={formOneFields}
                 buttonText="Submit Inquiry"
-                imageUrl={sustainabilityImg}
+                imageUrl="/images/home-slider-2.jpeg"
                 imageAlt={"Business Owner Image"}
             />
 
@@ -50,7 +47,7 @@ export default function Contacts() {
                 icon={<House />}
                 fields={formSecondFields}
                 buttonText="Submit Inquiry"
-                imageUrl={contact2}
+                imageUrl="/images/contact2.jpg"
                 imageAlt={"Homeowner Image"}
             />
 
@@ -60,7 +57,7 @@ export default function Contacts() {
                 icon={<Handshake />}
                 fields={formThirdFields}
                 buttonText="Submit Partnership Inquiry"
-                imageUrl={contact3}
+                imageUrl="/images/contact3.jpeg"
                 imageAlt={"Collaboration Image"}
             />
         </div>

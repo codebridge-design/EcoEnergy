@@ -98,14 +98,15 @@
   align-content: center;
   text-align: center;
   min-height: 280px;
-  border: 1px dashed color-mix(in srgb, var(--primary) 38%, transparent);
-  border-radius: 8px;
-  background: color-mix(in oklab, var(--secondary) 30%, var(--background));
+  border: 2px dashed #a9d8b8;
+  border-radius: 14px;
+  background: var(--secondary);
   padding: 1.5rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .featuredCard:hover {
-  background-color: color-mix(in oklab, var(--primary) 10%, transparent);
+  background: var(--accent);
   border-color: var(--primary);
 }
 
@@ -135,6 +136,10 @@
 
 .featuredButton {
   margin-top: 1rem;
+}
+
+.bottomCta {
+  background: color-mix(in oklab, var(--secondary) 30%, transparent);
 }
 
 .bottomCta .container {

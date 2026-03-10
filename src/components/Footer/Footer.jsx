@@ -1,13 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Leaf, Phone, Mail } from 'lucide-react';
+import { NAV_LINKS } from '../../config/navigation';
 import styles from './Footer.module.css';
-
-const quickLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/options', label: 'Options' },
-  { to: '/about', label: 'About' },
-  { to: '/contacts', label: 'Contacts' },
-];
 
 const services = [
   'Solar Panel Installation',
@@ -35,7 +29,7 @@ export default function Footer() {
         <div className={styles.col}>
           <h4 className={styles.colTitle}>Quick Links</h4>
           <ul className={styles.list}>
-            {quickLinks.map(({ to, label }) => (
+            {NAV_LINKS.map(({ to, label }) => (
               <li key={to}>
                 <Link to={to} className={styles.link}>{label}</Link>
               </li>

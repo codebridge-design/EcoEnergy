@@ -1,18 +1,74 @@
-# React + Vite
+# EcoEnergy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern landing site for a renewable energy company. Built with React + Vite, featuring a multi-page layout, dynamic solution filtering, and responsive design throughout.
 
-Currently, two official plugins are available:
+## Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Route | Description |
+|-------|-------------|
+| `/` | Home — hero slider, benefits, comparison, solutions overview, testimonials, CTA |
+| `/options` | Solutions catalog with category filters (Residential / Commercial / Industrial) |
+| `/about` | Company mission, strategic partnerships, milestone timeline |
+| `/contacts` | Contact forms for business owners, homeowners, and prospective partners |
+| `*` | 404 — page not found fallback |
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **React 19** with React Compiler (`babel-plugin-react-compiler`)
+- **React Router v7** — client-side routing
+- **Vite 7** — build tool
+- **CSS Modules** — scoped component styles with CSS custom properties
+- **Lucide React** — icon library
+- **Swiper** — hero slider
+- **React Hook Form** — form state management
 
-Note: This will impact Vite dev & build performances.
+## Getting Started
 
-## Expanding the ESLint configuration
+```bash
+# Install dependencies
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Benefits/
+│   ├── Button/
+│   ├── Comparison/
+│   ├── ContactForm/
+│   ├── CTA/
+│   ├── EnergySolutions/
+│   ├── ErrorBoundary/       # catches runtime errors, shows fallback UI
+│   ├── Footer/
+│   ├── Header/
+│   ├── Slider/Home/
+│   ├── SolutionCard/
+│   └── Testimonials/
+├── config/
+│   └── navigation.js        # shared nav links (used by Header and Footer)
+├── pages/
+│   ├── About/
+│   ├── Contacts/
+│   ├── Home/
+│   ├── NotFound/            # 404 page
+│   └── Options/
+│       └── optionsData.js   # solution catalog data
+├── App.jsx
+├── main.jsx
+└── index.css                # CSS custom properties / design tokens
+```
+
+## Design Tokens
+
+Global CSS variables are defined in `src/index.css` and used across all components — `--primary`, `--background`, `--foreground`, `--border`, `--muted-foreground`, etc.

@@ -8,11 +8,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import Button from '../../Button/Button';
-
-import slideOneImage from '../../../images/Home/home-slider-1.jpeg';
-import slideTwoImage from '../../../images/Home/home-slider-2.jpeg';
-import slideThreeImage from '../../../images/Home/home-silder-3.jpeg';
-
 import styles from './Slider.module.css';
 
 const slides = [
@@ -21,21 +16,21 @@ const slides = [
     title: 'Power Your Future with Clean Energy',
     description: 'Transform your business or home with sustainable renewable energy solutions.',
     buttonText: 'Work with Us',
-    image: slideThreeImage
+    image: '/images/home-slider-3.jpeg',
   },
   {
     id: 2,
     title: 'Now Partnered with GreenTech Global',
     description: "We've partnered with industry leaders to expand our horizons and bring you even better renewable energy solutions.",
     buttonText: 'Work with Us',
-    image: slideOneImage
+    image: '/images/home-slider-1.jpeg',
   },
   {
     id: 3,
     title: 'Sustainable Solutions for Every Need',
     description: 'From solar panels to wind turbines, we have the perfect renewable energy solution for you.',
     buttonText: 'Get started today',
-    image: slideTwoImage
+    image: '/images/home-slider-2.jpeg',
   },
 ];
 
