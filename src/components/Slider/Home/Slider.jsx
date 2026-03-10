@@ -42,7 +42,7 @@ const slides = [
 function Slide({ slide }) {
   return (
     <article className={styles.slide}>
-      <img src={slide.image} alt={slide.alt} className={styles.image} />
+      <img src={slide.image} className={styles.image} />
       <div className={styles.overlay} aria-hidden="true" />
       <div className={styles.content}>
         <h2 className={styles.title}>{slide.title}</h2>

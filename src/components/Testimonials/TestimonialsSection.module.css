@@ -15,7 +15,7 @@
 }
 
 .title {
-  color: #171a20;
+  color: var(--foreground);
   font-size: 64px;
   line-height: 70px;
   font-weight: 700;
@@ -23,7 +23,7 @@
 }
 
 .subtitle {
-  color: #687081;
+  color: var(--muted-foreground);
   font-size: 20px;
   line-height: 30px;
 }
@@ -40,8 +40,8 @@
 }
 
 .card {
-  background: #fff;
-  border: 1px solid #d4d8dd;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 24px;
   height: 100%;
@@ -57,7 +57,7 @@
 }
 
 .star {
-  color: #1ca14c;
+  color: var(--primary);
   width: 22px;
   height: 22px;
 }
@@ -67,21 +67,21 @@
 }
 
 .text {
-  color: #687081;
+  color: var(--muted-foreground);
   font-size: 17px;
   line-height: 30px;
   margin-bottom: 16px;
 }
 
 .name {
-  color: #181b20;
+  color: var(--foreground);
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
 }
 
 .role {
-  color: #687081;
+  color: var(--muted-foreground);
   font-size: 15px;
   line-height: 22px;
 }
@@ -104,7 +104,7 @@
 }
 
 .slider :global(.swiper-pagination-bullet-active) {
-  background: #2a2d31;
+  background: var(--foreground);
 }
 
 @media (width <= 1500px) {

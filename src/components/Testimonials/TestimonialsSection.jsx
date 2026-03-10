@@ -82,7 +82,7 @@ export default function TestimonialsSection() {
           modules={[Autoplay, Pagination]}
           loop
           autoplay={{
-            delay: 1500,
+            delay: 6000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}

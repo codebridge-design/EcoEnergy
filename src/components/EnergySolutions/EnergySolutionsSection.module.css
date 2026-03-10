@@ -15,7 +15,7 @@
 }
 
 .title {
-  color: #171a20;
+  color: var(--foreground);
   font-size: 52px;
   line-height: 58px;
   font-weight: 700;
@@ -23,7 +23,7 @@
 }
 
 .subtitle {
-  color: #687081;
+  color: var(--muted-foreground);
   font-size: 18px;
   line-height: 28px;
 }
@@ -38,7 +38,7 @@
 .moreCard {
   border: 2px dashed #a9d8b8;
   border-radius: 14px;
-  background: #eef9f2;
+  background: var(--secondary);
   min-height: 100%;
   padding: 40px 26px;
   display: flex;
@@ -50,13 +50,13 @@
 }
 
 .moreCard:hover {
-  background: #e4f4ea;
-  border: 2px dashed #1f9f4b;
+  background: var(--accent);
+  border: 2px dashed var(--primary);
 }
 
 
 .moreTitle {
-  color: #171a20;
+  color: var(--foreground);
   font-size: 30px;
   line-height: 38px;
   font-weight: 700;
@@ -65,7 +65,7 @@
 
 .moreDescription {
   max-width: 470px;
-  color: #687081;
+  color: var(--muted-foreground);
   font-size: 17px;
   line-height: 28px;
   margin-bottom: 24px;

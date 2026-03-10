@@ -19,14 +19,14 @@
   line-height: 48px;
   font-weight: 700;
   letter-spacing: -1px;
-  color: #1f2328;
+  color: var(--foreground);
   margin-bottom: 16px;
 }
 
 .subtitle {
   font-size: 18px;
   line-height: 30px;
-  color: #687081;
+  color: var(--muted-foreground);
 }
 
 .grid {
@@ -48,15 +48,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1b9a4a;
-  background: #dde7e1;
+  color: var(--primary);
+  background: var(--accent);
 }
 
 .cardTitle {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
-  color: #23272b;
+  color: var(--foreground);
   margin-bottom: 12px;
 }
 
@@ -65,7 +65,7 @@
   margin: 0 auto;
   font-size: 16px;
   line-height: 26px;
-  color: #687081;
+  color: var(--muted-foreground);
 }
 
 @media (width <= 1400px) {

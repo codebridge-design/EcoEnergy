@@ -15,7 +15,7 @@
 }
 
 .title {
-  color: #171a20;
+  color: var(--foreground);
   font-size: 34px;
   line-height: 42px;
   font-weight: 700;
@@ -23,7 +23,7 @@
 }
 
 .subtitle {
-  color: #687081;
+  color: var(--muted-foreground);
   font-size: 14px;
   line-height: 22px;
 }
@@ -35,17 +35,17 @@
 }
 
 .card {
-  border: 1px solid #d6d9dd;
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 30px 32px 28px;
 }
 
 .cardPositive {
-  border: 3px solid #1f9f4b;
+  border: 3px solid var(--primary);
 }
 
 .cardTitle {
-  color: #191d22;
+  color: var(--foreground);
   font-size: 22px;
   line-height: 30px;
   font-weight: 700;
@@ -53,7 +53,7 @@
 }
 
 .cardTitlePositive {
-  color: #1c9a48;
+  color: var(--primary);
 }
 
 .list {
@@ -67,18 +67,18 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #687081;
+  color: var(--muted-foreground);
   font-size: 15px;
   line-height: 22px;
 }
 
 .iconNegative {
-  color: #ff3232;
+  color: var(--destructive);
   flex-shrink: 0;
 }
 
 .iconPositive {
-  color: #1ca14c;
+  color: var(--primary);
   flex-shrink: 0;
 }
 
