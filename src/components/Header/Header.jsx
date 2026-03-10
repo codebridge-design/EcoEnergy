@@ -11,35 +11,37 @@ export default function Header() {
   return (
     <>
       <header className={`${styles.header} ${open ? styles.hidden : ''}`}>
-        <Link to="/" className={styles.logo}>
-          <span className={styles.logoIcon}>
-            <Leaf size={20} />
-          </span>
-          <span>EcoEnergy</span>
-        </Link>
+        <div className={styles.inner}>
+          <Link to="/" className={styles.logo}>
+            <span className={styles.logoIcon}>
+              <Leaf size={20} />
+            </span>
+            <span>EcoEnergy</span>
+          </Link>
 
-        <nav className={styles.nav}>
-          {NAV_LINKS.map(({ to, label, end }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={end}
-              className={({ isActive }) => isActive ? styles.active : ''}
-            >
-              {label}
-            </NavLink>
-          ))}
-        </nav>
+          <nav className={styles.nav}>
+            {NAV_LINKS.map(({ to, label, end }) => (
+              <NavLink
+                key={to}
+                to={to}
+                end={end}
+                className={({ isActive }) => (isActive ? styles.active : '')}
+              >
+                {label}
+              </NavLink>
+            ))}
+          </nav>
 
-        <Button to="/contacts" size="sm" className={styles.desktopBtn}>Get Started</Button>
+          <Button to="/contacts" size="sm" className={styles.desktopBtn}>Get Started</Button>
 
-        <button
-          className={styles.hamburger}
-          onClick={() => setOpen(true)}
-          aria-label="Open menu"
-        >
-          <Menu size={24} />
-        </button>
+          <button
+            className={styles.hamburger}
+            onClick={() => setOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
       </header>
 
       {open && (
