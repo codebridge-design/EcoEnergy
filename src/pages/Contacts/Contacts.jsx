@@ -41,6 +41,7 @@ export default function Contacts() {
                 fields={formOneFields}
                 buttonText="Submit Inquiry"
                 imageUrl={sustainabilityImg}
+                imageAlt={"Business Owner Image"}
             />
 
             <ContactForm
@@ -50,6 +51,7 @@ export default function Contacts() {
                 fields={formSecondFields}
                 buttonText="Submit Inquiry"
                 imageUrl={contact2}
+                imageAlt={"Homeowner Image"}
             />
 
             <ContactForm
@@ -59,6 +61,7 @@ export default function Contacts() {
                 fields={formThirdFields}
                 buttonText="Submit Partnership Inquiry"
                 imageUrl={contact3}
+                imageAlt={"Collaboration Image"}
             />
         </div>
     );

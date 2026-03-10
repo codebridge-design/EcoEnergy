@@ -50,7 +50,7 @@ export default function ContactForm({
         <div className={styles.imageContainer}>
           <img
               src={imageUrl}
-              alt={imageAlt || "Form image"}
+              alt={imageAlt}
               className={styles.formImage}
           />
         </div>
