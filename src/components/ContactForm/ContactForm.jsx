@@ -16,8 +16,8 @@ export default function ContactForm({
           </div>
 
           <form onSubmit={(e) => e.preventDefault()}>
-            {fields.map((field, index) => (
-                <div className={styles.formGroup} key={index}>
+            {fields.map((field) => (
+                <div className={styles.formGroup} key={field.id}>
                   <label className={styles.formLabel} htmlFor={field.name}>
                     {field.label}
                   </label>
