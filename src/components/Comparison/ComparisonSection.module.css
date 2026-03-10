@@ -1,0 +1,164 @@
+.section {
+  width: 100%;
+  padding: 24px 24px 96px;
+}
+
+.container {
+  max-width: 1840px;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: 760px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.title {
+  color: var(--foreground);
+  font-size: 34px;
+  line-height: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 30px 32px 28px;
+}
+
+.cardPositive {
+  border: 3px solid var(--primary);
+}
+
+.cardTitle {
+  color: var(--foreground);
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.cardTitlePositive {
+  color: var(--primary);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted-foreground);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.iconNegative {
+  color: var(--destructive);
+  flex-shrink: 0;
+}
+
+.iconPositive {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+@media (width <= 1600px) {
+  .title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .listItem {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media (width <= 1200px) {
+  .section {
+    padding: 24px 20px 84px;
+  }
+
+  .columns {
+    gap: 24px;
+  }
+
+  .card {
+    padding: 30px 24px;
+  }
+
+  .cardTitle {
+    font-size: 19px;
+    line-height: 27px;
+    margin-bottom: 16px;
+  }
+
+  .list {
+    gap: 12px;
+  }
+
+  .listItem {
+    font-size: 14px;
+    line-height: 20px;
+    gap: 10px;
+  }
+}
+
+@media (width <= 900px) {
+  .section {
+    padding: 20px 16px 72px;
+  }
+
+  .header {
+    margin-bottom: 36px;
+  }
+
+  .title {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    min-height: auto;
+  }
+}
