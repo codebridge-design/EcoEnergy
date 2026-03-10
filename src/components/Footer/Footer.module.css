@@ -1,20 +1,147 @@
 .footer {
+  background: color-mix(in oklab, var(--secondary) 30%, transparent);
   border-top: 1px solid var(--border);
-  background: var(--background);
-  padding: 2rem;
 }
 
-.inner {
+.top {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  padding: 3rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
 }
 
 .copy {
   color: var(--muted-foreground);
   font-size: 0.875rem;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #111;
+  text-decoration: none;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--primary);
+  border-radius: 8px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.colTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.link {
+  color: var(--muted-foreground);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.link:hover {
+  color: var(--primary);
+}
+
+.serviceItem {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+}
+
+.contactIcon {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.contactLink {
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.contactLink:hover {
+  color: var(--primary);
+}
+
+/* ── 1024px — 2×2 grid ── */
+@media (max-width: 1279px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 3rem;
+  }
+}
+
+/* ── 768px — single column ── */
+@media (max-width: 767px) {
+  .top {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.25rem 1.5rem;
+    gap: 1.75rem;
+  }
+
+  .bottom {
+    padding: 1rem 1.25rem;
+  }
+
+  .tagline {
+    max-width: 100%;
+  }
 }
