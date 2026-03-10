@@ -1,3 +1,50 @@
 .page {
-  padding: 2rem;
+  padding: 0 16px;
+}
+
+.pageHeader {
+  padding: 64px 0;
+  text-align: center;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: var(--font-weight-medium);
+    color: var(--muted-foreground);
+  }
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page {
+    padding: 0 48px;
+  }
+}
+
+@media (min-width: 80rem) {
+  .container {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 96rem) {
+  .container {
+    max-width: 96rem;
+  }
 }

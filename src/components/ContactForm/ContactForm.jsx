@@ -1,4 +1,5 @@
 import styles from './ContactForm.module.css';
+import Button from '../Button/Button';
 
 export default function ContactForm({
     heading, subheading, fields, buttonText, imageUrl, imageAlt, icon
@@ -26,6 +27,7 @@ export default function ContactForm({
                           id={field.name}
                           name={field.name}
                           placeholder={field.placeholder}
+                          required={field.required}
                           className={`${styles.formInput} ${styles.textarea}`}
                       />
                   ) : (
@@ -34,15 +36,14 @@ export default function ContactForm({
                           name={field.name}
                           type={field.type}
                           placeholder={field.placeholder}
+                          required={field.required}
                           className={styles.formInput}
                       />
                   )}
                 </div>
             ))}
 
-            <button type="submit" className={styles.submitButton}>
-              {buttonText}
-            </button>
+            <Button size={"md"} fullWidth={true}>{buttonText}</Button>
           </form>
         </div>
 
