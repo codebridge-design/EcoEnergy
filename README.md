@@ -12,6 +12,26 @@ A modern landing site for a renewable energy company. Built with React + Vite, f
 | `/contacts` | Contact forms for business owners, homeowners, and prospective partners |
 | `*` | 404 — page not found fallback |
 
+## Screenshots
+
+### Home
+
+![Home](public/screenshots/Home_1.png)
+![Home](public/screenshots/Home_2.png)
+
+### Options
+
+![Options](public/screenshots/Options_1.png)
+
+### About
+
+![About](public/screenshots/About_1.png)
+![About](public/screenshots/About_2.png)
+
+### Contacts
+
+![Contacts](public/screenshots/Contacts_1.png)
+
 ## Tech Stack
 
 - **React 19** with React Compiler (`babel-plugin-react-compiler`)
